@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">My Daily Planner</h1>
+        <p class="header__subtitle">Stay organized and productive</p>
+    </header>
+
+    <main class="main">
+        <section class="add-task-section">
+            <form class="add-task-form" id="addTaskForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="Enter a new task..."
+                        required
+                        maxlength="200"
+                    >
+                    <select id="categorySelect" class="category-select">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                        <option value="health">Health</option>
+                    </select>
+                    <button type="submit" class="add-btn">Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search tasks..."
+                >
+                <div class="search-stats" id="searchStats"></div>
+            </div>
+        </section>
+
+        <section class="controls-section">
+            <div class="controls">
+                <button class="clear-all-btn" id="clearAllBtn">Clear All Tasks</button>
+                <div class="task-counter" id="taskCounter">
+                    <span class="counter-text">Total: 0 | Completed: 0</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="tasks-section">
+            <div class="task-categories">
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="personal">Personal</button>
+                    <button class="filter-btn" data-category="work">Work</button>
+                    <button class="filter-btn" data-category="study">Study</button>
+                    <button class="filter-btn" data-category="health">Health</button>
+                </div>
+            </div>
+            
+            <ul class="task-list" id="taskList">
+              
+            </ul>
+            
+            <div class="empty-state" id="emptyState">
+                <p>No tasks yet. Add your first task above!</p>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Daily Planner. Stay productive!</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
